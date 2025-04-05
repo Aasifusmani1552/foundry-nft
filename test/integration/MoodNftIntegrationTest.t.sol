@@ -31,9 +31,6 @@ contract MoodNftTest is Test {
         vm.prank(USER);
         moodNft.flipMood(0);
 
-        assertEq(
-            keccak256(abi.encodePacked(moodNft.tokenURI(0))),
-            keccak256(abi.encodePacked(SAD_SVG_URI))
-        );
+        assertEq(keccak256(abi.encodePacked(moodNft.tokenURI(0))), keccak256(abi.encodePacked(SAD_SVG_URI)));
     }
 }
